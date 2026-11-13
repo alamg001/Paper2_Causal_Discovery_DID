@@ -1,0 +1,121 @@
+version: v0.4
+project:
+  name: Paper2
+  description: >-
+    Finite-population specialization of an orthogonal difference-in-differences
+    risk bound. A cell identity gives the exact product nuisance bias in a
+    treated conditional mean. A second theorem derives the treated squared
+    error bound with constant 4/(rho*c^3) from excess risk, finite probability
+    weights and overlap, proving the risk decomposition, pointwise Young bound
+    and weighted fourth-moment inequality. The risk bound specializes to X=W.
+    Causal identification and a learning guarantee remain explicit external
+    assumptions; continuous measure theory and PAG learning are not claimed.
+  authors:
+    - Antonio Lam García
+  responsible_maintainers:
+    - Antonio Lam García
+  license: MIT
+classification:
+  arxiv: [math.ST, stat.ME]
+  msc2020: [62D20, 62G08]
+sources:
+  - title: A Meta-learner for Heterogeneous Effects in Difference-in-Differences
+    type: paper
+    authors: [Hui Lan, Haoge Chang, Eleanor Wiske Dillon, Vasilis Syrgkanis]
+    id: https://proceedings.mlr.press/v267/lan25a.html
+    relationship: adapts
+    note: >-
+      Source for the orthogonal CATT risk and double-robust moment. This work
+      supplies an explicit finite-probability proof, not a new invention of DR DiD.
+  - title: Orthogonal Statistical Learning
+    type: paper
+    authors: [Dylan J. Foster, Vasilis Syrgkanis]
+    id: https://arxiv.org/abs/1901.09036
+    relationship: background
+  - title: Descubrimiento causal para DiD escalonado, preprint revisado
+    type: paper
+    authors: [Antonio Lam García]
+    relationship: formalizes
+    location: docs/MATHEMATICAL_ACCOUNT.md, self-contained account of the two finite results
+    note: >-
+      Accompanying unpublished manuscript in the complete replication archive.
+      Only its finite conditional identity and finite X=W product-risk bound
+      are selected in comparator.json. This project also ports the scoped
+      algebraic and supplied-graph cores from the author-provided ZIP to Lean
+      4.35.0; those additional cores are not claims selected for registration.
+status:
+  scope: >-
+    Two selected finite-covariate statements: the conditional cell identity
+    and the orthogonal product-risk bound for X=W. Auxiliary Math modules
+    retain their explicit scalar, concentration-event and supplied-graph
+    hypotheses. Both Challenge and Solution contain complete proofs.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+  main_results:
+    - declaration: Paper2.finite_cell_CATT_bias
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+    - declaration: Paper2.finite_orthogonal_product_bound
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+automation:
+  methods:
+    - method: agent
+      models: [GPT-6 (Codex)]
+      framework: Codex
+      tool_setup: Lean 4.35.0, Mathlib, ring, field_simp, linarith, nlinarith
+      notes: >-
+        AI-assisted mathematical revision, proof construction, module migration,
+        reproducibility code and documentation. Base sources came from the supplied
+        archive. A distinct technical agent later compared the supplied and
+        corrected theorem signatures, source hashes and mathematical scope.
+  notes: >-
+    Human authorship and responsibility remain with Antonio Lam Garcia.
+    Technical agent review and local execution evidence do not constitute
+    human expert peer review or Palomar editorial review. Costs and elapsed
+    effort were not reconstructed.
+fidelity:
+  divergences: >-
+    The selected risk theorem specializes the statistical argument to finite
+    W with X=W and assumes an explicit excess population risk learning bound.
+    The cell identity permits coarsening through an arbitrary finite cell;
+    this does not extend the selected risk bound to general coarsened X.
+    Causal identification, general measures, learned augmented PAGs, shared-fold
+    learning guarantees and normal inference are not formalized by these claims.
+review:
+  status: agent-reviewed
+  reviewers:
+    - GPT-6 (Codex technical agent)
+  notes: >-
+    Technical source review is documented in INFORME_REVISION_SORRY.md.
+    It compared original and corrected signatures without adding hypotheses
+    and checked unchanged Solution and Math source hashes. Local compilation,
+    separate Challenge/Solution axiom audits and the Windows unisolated
+    Comparator execution are recorded in evidence/validacion_lean.json.
+    This is agent review, not human peer review. The official full mechanical
+    preflight workflow is configured but has not run; Palomar verification,
+    editorial review and registration remain pending.
+alignment:
+  namespace: Paper2
+  statements:
+    - source: Revised preprint, finite conditional CATT identity
+      lean: Paper2.finite_cell_CATT_bias
+      module: Solution
+      status: proved
+      note: Finite cell with positive treated mass and nonzero fitted denominators.
+    - source: Revised preprint, finite X=W orthogonal product-risk bound
+      lean: Paper2.finite_orthogonal_product_bound
+      module: Solution
+      status: proved
+      note: Finite W, overlap and an explicit excess population risk hypothesis.
+limitations:
+  - The squared-error theorem is for finite W and X=W.
+  - The cell identity allows coarsening, but no general coarsened risk theorem is selected.
+  - The excess population risk learning condition is assumed explicitly.
+  - CPT, consistency and causal admissibility are not learned or certified.
+  - No general-measure concentration, inference or augmented PAG learning is claimed.

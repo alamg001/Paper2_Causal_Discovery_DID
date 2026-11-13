@@ -1,5 +1,7 @@
 # Paper2 — finite orthogonal difference-in-differences
 
+**Target GitHub repository name:** `Paper2_Causal_Discovery_DID`. The Lean package remains `paper2` and the namespace remains `Paper2`.
+
 **Author and responsible maintainer:** Antonio Lam García.
 
 This repository contains the substantive Lean development of two finite
@@ -73,12 +75,8 @@ Comparator run. The preliminary Python script is not Palomar's verifier.
 
 ## GitHub and Palomar
 
-Target GitHub repository name: **Paper2_CausalDicsovery_DID**. The Lean namespace remains `Paper2`
-and the Lake package remains `paper2`. The workflows use `github.repository`.
-The archive contains this directory's contents directly, without a wrapper folder.
-
 **Use this directory itself as the GitHub repository root.** Do not upload
-an enclosing folder or omit hidden .github files.
+the enclosing Paper2 folder or omit hidden .github files.
 Spanish instructions are in [docs/GUIA_GITHUB_PALOMAR.md](docs/GUIA_GITHUB_PALOMAR.md).
 
 After publishing a public snapshot, run the two manually triggered workflows:

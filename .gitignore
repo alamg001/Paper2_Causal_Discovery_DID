@@ -1,0 +1,10 @@
+.lake/
+*.olean
+*.ilean
+*.trace
+*.o
+*.c
+.venv/
+__pycache__/
+*.pyc
+envio_palomar.json

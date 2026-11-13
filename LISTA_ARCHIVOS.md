@@ -1,0 +1,67 @@
+# Archivos para Paper2_Causal_Discovery_DID
+
+61 archivos; rutas relativas a la raíz del repositorio GitHub.
+
+| Archivo | Descripción | Comentario |
+|---|---|---|
+| .gitattributes | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| .github/workflows/palomar-preflight.yml | Preflight oficial completo reutilizable y fijado por SHA. | Necesita repositorio público; no se ha ejecutado. |
+| .github/workflows/verify.yml | CI manual de comprobación estática y Lean. | Workflow ordinario; ejecución remota pendiente. |
+| .gitignore | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| Audit.lean | Auditoría de 26 declaraciones de Math/Solution. | Imprime tipos y axiomas. |
+| AuditChallenge.lean | Auditoría de seis declaraciones paralelas de Challenge. | No añade seis teoremas distintos. |
+| Challenge.lean | Enunciados y pruebas finitas independientes. | Sin admisiones; imports directos de Mathlib. |
+| ESTADO_PALOMAR.md | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| INFORME_REVISION_SORRY.md | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| LEER_PRIMERO.md | Orden de lectura e instrucciones iniciales. | Esta carpeta es la raíz del repositorio. |
+| LICENSE | Licencia MIT confirmada por el autor. | Coherente con project.license. |
+| LISTA_ARCHIVOS.csv | Versión tabular del inventario completo. | Abrir en editor o herramienta de tablas. |
+| LISTA_ARCHIVOS.md | Inventario con descripción y comentario por archivo. | Incluye también los archivos ocultos de GitHub. |
+| Main.lean | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| Math.lean | Desarrollo matemático auxiliar del proyecto. | Conserva sus hipótesis; no es un resultado adicional seleccionado en Comparator. |
+| Math/Definitions.lean | Desarrollo matemático auxiliar del proyecto. | Conserva sus hipótesis; no es un resultado adicional seleccionado en Comparator. |
+| Math/FiniteProbability.lean | Desarrollo matemático auxiliar del proyecto. | Conserva sus hipótesis; no es un resultado adicional seleccionado en Comparator. |
+| Math/Lemmas.lean | Desarrollo matemático auxiliar del proyecto. | Conserva sus hipótesis; no es un resultado adicional seleccionado en Comparator. |
+| Math/SelectionDAG.lean | Desarrollo matemático auxiliar del proyecto. | Conserva sus hipótesis; no es un resultado adicional seleccionado en Comparator. |
+| Math/Theorem.lean | Desarrollo matemático auxiliar del proyecto. | Conserva sus hipótesis; no es un resultado adicional seleccionado en Comparator. |
+| README.md | Resumen científico y técnico del repositorio. | Leer antes de publicar. |
+| SHA256SUMS.txt | Manifiesto de integridad de todos los archivos excepto él mismo. | Recalcular si se modifica la instantánea. |
+| Solution.lean | Definiciones y pruebas correspondientes. | No importar simultáneamente con Challenge en un mismo módulo. |
+| cambios_Challenge.patch | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| comparator.json | Dos resultados seleccionados y axiomas permitidos. | Rutas convencionales; config usada para la solicitud futura. |
+| docs/GUIA_GITHUB_PALOMAR.md | Guía para subir la carpeta a GitHub y ejecutar los workflows. | Los comandos de publicación son instrucciones, no acciones ya ejecutadas. |
+| docs/MATHEMATICAL_ACCOUNT.md | Cuenta matemática autocontenida de los dos resultados finitos. | Hipótesis, demostraciones, procedencia y límites para revisión. |
+| evidence/audit_challenge.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| evidence/audit_lean.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| evidence/axiomas.json | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| evidence/comparator_windows.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| evidence/empaquetado_github_2026-11-12.json | Registro del empaquetado para el nombre GitHub confirmado. | Fuentes Lean y configuración intactas; comprobación oficial pendiente. |
+| evidence/historial_2026-11-07/audit_challenge.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/audit_lean.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/axiomas.json | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/axiomas.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/comparator_windows.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/lake_build.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/lake_version.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/lean_version.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/preparacion_palomar.json | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/validacion_lean.json | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/historial_2026-11-07/validar_windows.log | Evidencia histórica de la validación anterior. | Conserva la fecha original; usar validacion_repositorio.json como estado vigente. |
+| evidence/lake_build.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| evidence/lake_version.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| evidence/lean_version.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| evidence/referencias_preparacion.json | Fuentes oficiales y revisión exacta del workflow consultado. | No acredita revisión editorial. |
+| evidence/source_normalization.json | Huellas antes y después de normalizar finales de línea. | Cambios de CRLF a LF, sin cambios matemáticos. |
+| evidence/validacion_estatica.json | Resultado del validador preliminar de la carpeta. | Los controles completos de Palomar siguen pendientes. |
+| evidence/validacion_lean.json | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| evidence/validacion_repositorio.json | Resumen de la ejecución nueva sobre estas fuentes. | Compilación y comparación local Windows sin aislamiento. |
+| evidence/validar_windows.log | Registro de la ejecución indicada por el nombre. | Evidencia local; revisar el modo de ejecución. |
+| formalization.yaml | Metadatos v0.4 y correspondencia de resultados. | Autoría humana, automatización, revisión y alcance explícitos. |
+| lake-manifest.json | Nueve dependencias Git fijadas por SHA completo. | Conservar en el commit público. |
+| lakefile.toml | Configuración de bibliotecas y dependencias Lake. | Único Lakefile de la raíz. |
+| lean-toolchain | Versión exacta de Lean 4.35.0. | Debe coincidir con el toolchain de Mathlib fijado. |
+| scripts/requirements-validation.txt | Dependencias fijadas del validador Python. | Python 3.10+, PyYAML y tomli condicional. |
+| scripts/resumen_envio.ps1 | Imprime remoto y commit Git cuando existen. | No publica, autentica ni envía solicitudes. |
+| scripts/validate_repository.py | Chequeo estático preliminar de fuentes, metadatos y estructura. | No sustituye el verificador oficial; --check-hashes comprueba integridad. |
+| validar.ps1 | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
+| validar.sh | Archivo de soporte de la carpeta preparada. | Consultar README.md y la guía para su función. |
