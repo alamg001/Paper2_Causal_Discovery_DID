@@ -1,0 +1,51 @@
+{
+  "packaged_on": "2026-11-12 America/Lima",
+  "repository_name": "Paper2_Causal_Discovery_DID",
+  "layout": "archive contents are the GitHub repository root; no outer directory",
+  "files": 61,
+  "selected_declarations": [
+    "Paper2.finite_cell_CATT_bias",
+    "Paper2.finite_orthogonal_product_bound"
+  ],
+  "own_lean_sources": 11,
+  "source_sha256": {
+    "Audit.lean": "c40e80e1f475dcd36e455d52fbe1347e6d88c515442e88fdd4656d16aaae9220",
+    "AuditChallenge.lean": "0083ee86b048582d2b908a4138298f2d7c7957c8d4fd5800f969a20eaad56163",
+    "Challenge.lean": "9bfd7091dcc012567efcc6b5440c9d027621d6efa67eb35569149f9844504e03",
+    "Main.lean": "1f5a306874d5f3c55406c7656a0e5dfff316d04a3d5e602f15f492c47b45b8d8",
+    "Math.lean": "ce5d55d198e6d7f84b5e9c3f2ca1ccbefcdfb5e53321bdca292a07d27193c702",
+    "Math/Definitions.lean": "e88a9fde864ad9663525d72b899d184d26300d61b39f6c17f8719e441e292be6",
+    "Math/FiniteProbability.lean": "1f21ee7e3f6c7a4f83b4046b1d3618739f785ffc7186cadc3d9e511dd9297423",
+    "Math/Lemmas.lean": "3fd2f4185c871f8c16c6e9315ba25c8f47c5ad5a2481dff8fab884254c8259fe",
+    "Math/SelectionDAG.lean": "4b1f4579bfbac44f0946dd6b27936f9678651e124a8cc1284ae3ac02f0673141",
+    "Math/Theorem.lean": "3471ad1f2f0083b21f1f7d8eb3e4fbd6d8e7d7fa69f5866878934cce29311a03",
+    "Solution.lean": "970d40d8c8281503224e2f3bbf8b4781265c2c9553610454d0bda23d8bab0995",
+    "formalization.yaml": "7287f86a5704e4b7d69ddedb37f71e7969bc6996ab7af4438cb872ca2b3dcaf9",
+    "comparator.json": "47d06dabcd2b17910d68bf2c2a27b84d1ef8d0b106037a80945b66dc70c2abdc",
+    "lakefile.toml": "4c09037935c6e8268a8f16477dbd712631ee040ae8ae2cd061b78dcaedeaa249",
+    "lake-manifest.json": "fbfecf1ac6233a992b85476786ed4d57d85ac72c41b7607583193299e0abd4f3",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "LICENSE": "a4efb11966c69374d64905ab1a70093619e798f42e78dbad09a14ca193a1aaf6",
+    ".github/workflows/verify.yml": "35165dd46e78d3368ea441c035ab89ec638fc2c636966c9e87d3be6652799f82",
+    ".github/workflows/palomar-preflight.yml": "302b36fc82774bd117d1f41c94e9bbaa61f70ea7793287abc8f0d926f3d71cf3"
+  },
+  "changes": [
+    "Updated external GitHub repository name in instructions and README",
+    "Added browser upload steps",
+    "Corrected root-directory wording",
+    "Regenerated file catalogs and SHA256 manifest"
+  ],
+  "mathematical_statements_and_proofs_changed": false,
+  "previous_lean_execution_date": "2026-11-08",
+  "previous_lean_execution_environment": "Windows, explicitly unisolated",
+  "new_lean_compilation_in_this_packaging": false,
+  "official_full_mechanical_preflight": "configured, no remote run supplied",
+  "public_repository_url": null,
+  "pushed_commit": null,
+  "palomar_submission": "not initiated by this packaging",
+  "requirements_consulted_on": "2026-11-12",
+  "requirements_sources": [
+    "https://palomar-registry.org/how-to-submit",
+    "https://raw.githubusercontent.com/PalomarRegistry/PalomarSubmission/main/toolchains.json"
+  ]
+}

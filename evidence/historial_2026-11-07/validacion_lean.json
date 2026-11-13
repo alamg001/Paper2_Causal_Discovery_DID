@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-07 America/Lima",
+  "input_project": "C:\\_Paper2 Descubrimiento_causal_DiD_escalonado_Q1\\Paper2\\Lean",
+  "input_challenge_sha256": "8463be3f04cd2f2e3e34c3d088e4a4d6f0fe5a96f1f53c75e1aff4e6c529a5a2",
+  "corrected_challenge_sha256": "9bfd7091dcc012567efcc6b5440c9d027621d6efa67eb35569149f9844504e03",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "admissions_before": [
+    {
+      "file": "Challenge.lean",
+      "line": 68,
+      "theorem": "finite_cell_CATT_bias"
+    },
+    {
+      "file": "Challenge.lean",
+      "line": 85,
+      "theorem": "finite_orthogonal_product_bound"
+    }
+  ],
+  "admissions_in_all_project_sources_after": [],
+  "project_lean_source_files": 11,
+  "selected_statement_signatures_unchanged": true,
+  "existing_solution_and_math_sources_unchanged": true,
+  "lake_build_exit_code": 0,
+  "validator_ps1_exit_code": 0,
+  "audit_exit_code": 0,
+  "audit_challenge_exit_code": 0,
+  "audited_solution_and_math_results": 26,
+  "independently_audited_challenge_declarations": 6,
+  "comparator_selected_theorems": 2,
+  "comparator_exit_code": 0,
+  "kernels_accepting_selected_solution": [
+    "Lean default",
+    "NanoDa"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx_in_audits": false,
+  "local_mode": "Windows explicitly unisolated; no Palomar protected verification",
+  "kernel_modified": false,
+  "Palomar_protected_verification": "not_run",
+  "Palomar_registration": "not_submitted",
+  "license": "MIT author-confirmed; Lean code and proofs",
+  "scope": "Finite covariate results and supplied graph cores; no general-measure or learned-PAG theorem added"
+}

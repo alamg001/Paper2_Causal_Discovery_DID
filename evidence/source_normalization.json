@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-08 America/Lima",
+  "normalization": "CRLF to LF for stable Git checkouts",
+  "Lean_sources": [
+    {
+      "file": "Audit.lean",
+      "previous_sha256": "14052285efda322fda9a2ba3842316999c85b1e5af39be36fa8161e471f2002f",
+      "repository_sha256": "c40e80e1f475dcd36e455d52fbe1347e6d88c515442e88fdd4656d16aaae9220",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "AuditChallenge.lean",
+      "previous_sha256": "0083ee86b048582d2b908a4138298f2d7c7957c8d4fd5800f969a20eaad56163",
+      "repository_sha256": "0083ee86b048582d2b908a4138298f2d7c7957c8d4fd5800f969a20eaad56163",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Challenge.lean",
+      "previous_sha256": "9bfd7091dcc012567efcc6b5440c9d027621d6efa67eb35569149f9844504e03",
+      "repository_sha256": "9bfd7091dcc012567efcc6b5440c9d027621d6efa67eb35569149f9844504e03",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Main.lean",
+      "previous_sha256": "e38b5ef03df869250dc5de31dca0567763bf04e64ad3ea72f09aa49eeff929eb",
+      "repository_sha256": "1f5a306874d5f3c55406c7656a0e5dfff316d04a3d5e602f15f492c47b45b8d8",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Math/Definitions.lean",
+      "previous_sha256": "9d2e53e142a4e0b4bd295726c5a0c5916cdc5c5924bb19a6faf420337676654f",
+      "repository_sha256": "e88a9fde864ad9663525d72b899d184d26300d61b39f6c17f8719e441e292be6",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Math/FiniteProbability.lean",
+      "previous_sha256": "baf4a33e22c7e3894dea1635c28b46d56fd373252d08d4f212e0edf849503b55",
+      "repository_sha256": "1f21ee7e3f6c7a4f83b4046b1d3618739f785ffc7186cadc3d9e511dd9297423",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Math/Lemmas.lean",
+      "previous_sha256": "48d7bb87ae5fa37a68ee9ee1b435d5c7d495bb94d6413593fce96aed15f4250c",
+      "repository_sha256": "3fd2f4185c871f8c16c6e9315ba25c8f47c5ad5a2481dff8fab884254c8259fe",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Math/SelectionDAG.lean",
+      "previous_sha256": "db2b616daa1ab05764084bbd34548174c31de4a9b761ed906128b0960eaebb56",
+      "repository_sha256": "4b1f4579bfbac44f0946dd6b27936f9678651e124a8cc1284ae3ac02f0673141",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Math/Theorem.lean",
+      "previous_sha256": "1f201ceda1efde641a835e360869b78bfb4a6e69da8ef31236eb47a2c1e0958a",
+      "repository_sha256": "3471ad1f2f0083b21f1f7d8eb3e4fbd6d8e7d7fa69f5866878934cce29311a03",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Math.lean",
+      "previous_sha256": "b426a7ac288d996228acebb867813f51af3bda9b62617f054c636a0f7adafac7",
+      "repository_sha256": "ce5d55d198e6d7f84b5e9c3f2ca1ccbefcdfb5e53321bdca292a07d27193c702",
+      "mathematical_source_unchanged": true
+    },
+    {
+      "file": "Solution.lean",
+      "previous_sha256": "970d40d8c8281503224e2f3bbf8b4781265c2c9553610454d0bda23d8bab0995",
+      "repository_sha256": "970d40d8c8281503224e2f3bbf8b4781265c2c9553610454d0bda23d8bab0995",
+      "mathematical_source_unchanged": true
+    }
+  ],
+  "scope": "No theorem statement, hypothesis or proof body changed"
+}

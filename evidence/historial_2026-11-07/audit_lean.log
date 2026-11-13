@@ -1,0 +1,136 @@
+ConjeturaLeanXYZ.conditional_signal_bias_identity (p phat mu1 mu0 m : ℝ) (hh : 1 - phat ≠ 0) :
+  signalMean p phat mu1 mu0 m = p * (mu1 - mu0) + nuisanceProduct p phat mu0 m
+ConjeturaLeanXYZ.product_bound_from_reduction (q b eps prod rho c : ℝ) (hbasic : q ^ 2 ≤ eps + 2 * q * b)
+  (hbias : b ^ 2 ≤ prod / (rho * c ^ 3)) : q ^ 2 ≤ 2 * eps + 4 / (rho * c ^ 3) * prod
+ConjeturaLeanXYZ.pag_cpt_no_graphical_adjustment {V H : Type} (d q : V) (classOf : Set (MixedGraph V))
+  (admissible : Set (Set V)) (compatible : Set H) (projection : H → MixedGraph V) (dSeparated : H → Set V → Prop)
+  (membership : ∀ h ∈ compatible, projection h ∈ classOf)
+  (preservation : ∀ h ∈ compatible, ∀ W ∈ admissible, dSeparated h W → MSeparated (projection h) d q W)
+  (certificate : ∀ W ∈ admissible, ∃ path, ∀ M ∈ classOf, ConnectingPath M d q W path) :
+  ¬∃ h ∈ compatible, ∃ W ∈ admissible, dSeparated h W
+theorem ConjeturaLeanXYZ.product_bound_from_reduction : ∀ (q b eps prod rho c : ℝ),
+  q ^ 2 ≤ eps + 2 * q * b → b ^ 2 ≤ prod / (rho * c ^ 3) → q ^ 2 ≤ 2 * eps + 4 / (rho * c ^ 3) * prod :=
+<not imported>
+theorem ConjeturaLeanXYZ.pag_cpt_no_graphical_adjustment : ∀ {V H : Type} (d q : V) (classOf : Set (MixedGraph V))
+  (admissible : Set (Set V)) (compatible : Set H) (projection : H → MixedGraph V) (dSeparated : H → Set V → Prop),
+  (∀ h ∈ compatible, projection h ∈ classOf) →
+    (∀ h ∈ compatible, ∀ W ∈ admissible, dSeparated h W → MSeparated (projection h) d q W) →
+      (∀ W ∈ admissible, ∃ path, ∀ M ∈ classOf, ConnectingPath M d q W path) →
+        ¬∃ h ∈ compatible, ∃ W ∈ admissible, dSeparated h W :=
+<not imported>
+'ConjeturaLeanXYZ.scalar_squared_loss_self_bounding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.control_weight_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.conditional_signal_bias_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.signal_double_robust_m' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.signal_double_robust_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.old_signal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.excess_risk_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.cohort_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.squared_normalized_quantity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.convex_two_cohort_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.product_bound_from_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.path_certificates_imply_uniform_connection' depends on axioms: [propext]
+'ConjeturaLeanXYZ.pag_cpt_no_graphical_adjustment' depends on axioms: [propext]
+ConjeturaLeanXYZ.finite_conditional_CATT_bias.{u_1} {W : Type u_1} [Fintype W] (law : FiniteLaw W) (s : Finset W)
+  (p phat mu1 mu0 m : W → ℝ) (_hprob : ∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) (hden : ∀ w ∈ s, 1 - phat w ≠ 0)
+  (_hpositive : 0 < cellTreatedMass s law.mass p) :
+  (∑ w ∈ s, law.mass w * signalMean (p w) (phat w) (mu1 w) (mu0 w) (m w)) / cellTreatedMass s law.mass p =
+    cellCATT s law.mass p mu1 mu0 +
+      (∑ w ∈ s, law.mass w * nuisanceProduct (p w) (phat w) (mu0 w) (m w)) / cellTreatedMass s law.mass p
+ConjeturaLeanXYZ.finite_true_excess.{u_1} {W : Type u_1} [Fintype W] (law : FiniteLaw W) (p mu1 mu0 theta : W → ℝ)
+  (_hprob : ∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) (hden : ∀ (w : W), 1 - p w ≠ 0)
+  (_hrho : 0 < cellTreatedMass Finset.univ law.mass p) :
+  (finiteRiskNumerator Finset.univ law.mass p (fun w => signalMean (p w) (p w) (mu1 w) (mu0 w) (mu0 w)) theta -
+        finiteRiskNumerator Finset.univ law.mass p (fun w => signalMean (p w) (p w) (mu1 w) (mu0 w) (mu0 w)) fun w =>
+          mu1 w - mu0 w) /
+      cellTreatedMass Finset.univ law.mass p =
+    (∑ w, law.mass w * p w * (theta w - (mu1 w - mu0 w)) ^ 2) / cellTreatedMass Finset.univ law.mass p
+ConjeturaLeanXYZ.supplied_DAG_class_no_adjustment {V : Type} (d q : V) (classOf : Set (RankedDAG V))
+  (admissible : Set (Set V)) (S : Set V) (hne : classOf.Nonempty) (ha : admissible.Nonempty)
+  (_endpoints : ∀ W ∈ admissible, d ∉ W ∪ S ∧ q ∉ W ∪ S)
+  (cert : ∀ G ∈ classOf, ∀ W ∈ admissible, ∃ path, ConnectingPath G.toMixed d q (W ∪ S) path) :
+  classOf.Nonempty ∧ admissible.Nonempty ∧ ¬∃ G ∈ classOf, ∃ W ∈ admissible, selectedDSeparated G d q W S
+theorem ConjeturaLeanXYZ.finite_conditional_CATT_bias.{u_1} : ∀ {W : Type u_1} [inst : Fintype W] (law : FiniteLaw W)
+  (s : Finset W) (p phat mu1 mu0 m : W → ℝ),
+  (∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) →
+    (∀ w ∈ s, 1 - phat w ≠ 0) →
+      0 < cellTreatedMass s law.mass p →
+        (∑ w ∈ s, law.mass w * signalMean (p w) (phat w) (mu1 w) (mu0 w) (m w)) / cellTreatedMass s law.mass p =
+          cellCATT s law.mass p mu1 mu0 +
+            (∑ w ∈ s, law.mass w * nuisanceProduct (p w) (phat w) (mu0 w) (m w)) / cellTreatedMass s law.mass p :=
+<not imported>
+theorem ConjeturaLeanXYZ.finite_true_excess.{u_1} : ∀ {W : Type u_1} [inst : Fintype W] (law : FiniteLaw W)
+  (p mu1 mu0 theta : W → ℝ),
+  (∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) →
+    (∀ (w : W), 1 - p w ≠ 0) →
+      0 < cellTreatedMass Finset.univ law.mass p →
+        (finiteRiskNumerator Finset.univ law.mass p (fun w => signalMean (p w) (p w) (mu1 w) (mu0 w) (mu0 w)) theta -
+              finiteRiskNumerator Finset.univ law.mass p (fun w => signalMean (p w) (p w) (mu1 w) (mu0 w) (mu0 w))
+                fun w => mu1 w - mu0 w) /
+            cellTreatedMass Finset.univ law.mass p =
+          (∑ w, law.mass w * p w * (theta w - (mu1 w - mu0 w)) ^ 2) / cellTreatedMass Finset.univ law.mass p :=
+<not imported>
+theorem ConjeturaLeanXYZ.supplied_DAG_class_no_adjustment : ∀ {V : Type} (d q : V) (classOf : Set (RankedDAG V))
+  (admissible : Set (Set V)) (S : Set V),
+  classOf.Nonempty →
+    admissible.Nonempty →
+      (∀ W ∈ admissible, d ∉ W ∪ S ∧ q ∉ W ∪ S) →
+        (∀ G ∈ classOf, ∀ W ∈ admissible, ∃ path, ConnectingPath G.toMixed d q (W ∪ S) path) →
+          classOf.Nonempty ∧ admissible.Nonempty ∧ ¬∃ G ∈ classOf, ∃ W ∈ admissible, selectedDSeparated G d q W S :=
+<not imported>
+'ConjeturaLeanXYZ.finite_cell_signal_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.finite_conditional_CATT_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.finite_risk_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.finite_true_excess' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.linear_stage_error_from_concentration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConjeturaLeanXYZ.supplied_DAG_class_no_adjustment' depends on axioms: [propext]
+'ConjeturaLeanXYZ.selection_collider_active' depends on axioms: [propext, Quot.sound]
+Paper2.finite_cell_CATT_bias.{u_1} {W : Type u_1} [Fintype W] (law : Paper2.Law W) (s : Finset W)
+  (p phat mu1 mu0 m : W → ℝ) (_hp : ∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) (_hr : 0 < Paper2.treatedMass s law.mass p)
+  (hd : ∀ w ∈ s, 1 - phat w ≠ 0) :
+  (∑ w ∈ s, law.mass w * Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) / Paper2.treatedMass s law.mass p =
+    Paper2.catt s law.mass p mu1 mu0 +
+      (∑ w ∈ s, law.mass w * Paper2.bias (p w) (phat w) (mu0 w) (m w)) / Paper2.treatedMass s law.mass p
+Paper2.finite_orthogonal_product_bound.{u_1} {W : Type u_1} [Fintype W] (law : Paper2.Law W)
+  (p phat mu1 mu0 m theta : W → ℝ) (c eps : ℝ) (hc : 0 < c) (hp : ∀ (w : W), c ≤ p w ∧ p w ≤ 1 - c)
+  (hphat : ∀ (w : W), c ≤ phat w ∧ phat w ≤ 1 - c) (hrho : 0 < ∑ w, law.mass w * p w)
+  (hlearn :
+    (Paper2.risk law.mass p (fun w => Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) theta -
+          Paper2.risk law.mass p (fun w => Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) fun w => mu1 w - mu0 w) /
+        ∑ w, law.mass w * p w ≤
+      eps) :
+  (∑ w, law.mass w * p w * (theta w - (mu1 w - mu0 w)) ^ 2) / ∑ w, law.mass w * p w ≤
+    2 * eps +
+      4 / ((∑ w, law.mass w * p w) * c ^ 3) *
+        (√(∑ w, law.mass w * (m w - mu0 w) ^ 4) * √(∑ w, law.mass w * (phat w - p w) ^ 4))
+theorem Paper2.finite_cell_CATT_bias.{u_1} : ∀ {W : Type u_1} [inst : Fintype W] (law : Paper2.Law W) (s : Finset W)
+  (p phat mu1 mu0 m : W → ℝ),
+  (∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) →
+    0 < Paper2.treatedMass s law.mass p →
+      (∀ w ∈ s, 1 - phat w ≠ 0) →
+        (∑ w ∈ s, law.mass w * Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) / Paper2.treatedMass s law.mass p =
+          Paper2.catt s law.mass p mu1 mu0 +
+            (∑ w ∈ s, law.mass w * Paper2.bias (p w) (phat w) (mu0 w) (m w)) / Paper2.treatedMass s law.mass p :=
+<not imported>
+theorem Paper2.finite_orthogonal_product_bound.{u_1} : ∀ {W : Type u_1} [inst : Fintype W] (law : Paper2.Law W)
+  (p phat mu1 mu0 m theta : W → ℝ) (c eps : ℝ),
+  0 < c →
+    (∀ (w : W), c ≤ p w ∧ p w ≤ 1 - c) →
+      (∀ (w : W), c ≤ phat w ∧ phat w ≤ 1 - c) →
+        0 < ∑ w, law.mass w * p w →
+          (Paper2.risk law.mass p (fun w => Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) theta -
+                  Paper2.risk law.mass p (fun w => Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) fun w =>
+                    mu1 w - mu0 w) /
+                ∑ w, law.mass w * p w ≤
+              eps →
+            (∑ w, law.mass w * p w * (theta w - (mu1 w - mu0 w)) ^ 2) / ∑ w, law.mass w * p w ≤
+              2 * eps +
+                4 / ((∑ w, law.mass w * p w) * c ^ 3) *
+                  (√(∑ w, law.mass w * (m w - mu0 w) ^ 4) * √(∑ w, law.mass w * (phat w - p w) ^ 4)) :=
+<not imported>
+'Paper2.signal_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.finite_cell_CATT_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.risk_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.pointwise_young' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.weighted_fourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.finite_orthogonal_product_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

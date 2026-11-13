@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-08 America/Lima",
+  "guide": "https://palomar-registry.org/how-to-submit",
+  "policy": "https://github.com/PalomarRegistry/PalomarPolicy/blob/main/CONTRIBUTING.md",
+  "template": "https://github.com/PalomarRegistry/PalomarTemplate",
+  "metadata_schema": "https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/v0.4.schema.json",
+  "agent_protocol": "https://submit.palomar-registry.org/llms.txt",
+  "official_workflow_revision": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+  "scope": "Source references and a pinned real workflow interface; no official preflight pass is claimed"
+}

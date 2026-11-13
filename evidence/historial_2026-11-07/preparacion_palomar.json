@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-07 America/Lima",
+  "policy_repository_commit": "28bd48b9b71bbb2a82c718ce761d5a4220ef8e60",
+  "submission_repository_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+  "minimum_toolchain": "v4.35.0-rc2",
+  "policy_url": "https://github.com/PalomarRegistry/PalomarPolicy/blob/28bd48b9b71bbb2a82c718ce761d5a4220ef8e60/CONTRIBUTING.md",
+  "checked_locally": [
+    "config keys",
+    "matching selected statement source",
+    "source modules and line limits",
+    "pinned Git manifest",
+    "metadata required fields",
+    "standard axiom audit",
+    "compiler",
+    "unisolated Comparator and NanoDa"
+  ],
+  "not_run": [
+    "Palomar server protected closure authentication",
+    "Linux bubblewrap run",
+    "Palomar editorial review",
+    "public repository registration"
+  ],
+  "challenge_lines": 208,
+  "challenge_bytes": 9609,
+  "configuration_sha256": "beb7f753ec75aba3157b1537864181fb2ce293ffb98863d3793bee3b4ac446a6",
+  "challenge_sha256": "9bfd7091dcc012567efcc6b5440c9d027621d6efa67eb35569149f9844504e03",
+  "solution_sha256": "970d40d8c8281503224e2f3bbf8b4781265c2c9553610454d0bda23d8bab0995",
+  "previous_template_challenge_sha256": "8463be3f04cd2f2e3e34c3d088e4a4d6f0fe5a96f1f53c75e1aff4e6c529a5a2",
+  "challenge_proof_complete": true,
+  "fresh_validation": "validacion_lean.json",
+  "policy_reference_scope": "Policy commit retained from previous review; no new server review is asserted"
+}

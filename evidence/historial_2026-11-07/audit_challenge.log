@@ -1,0 +1,24 @@
+Paper2.finite_cell_CATT_bias.{u_1} {W : Type u_1} [Fintype W] (law : Paper2.Law W) (s : Finset W)
+  (p phat mu1 mu0 m : W → ℝ) (_hp : ∀ (w : W), 0 ≤ p w ∧ p w ≤ 1) (_hr : 0 < Paper2.treatedMass s law.mass p)
+  (hd : ∀ w ∈ s, 1 - phat w ≠ 0) :
+  (∑ w ∈ s, law.mass w * Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) / Paper2.treatedMass s law.mass p =
+    Paper2.catt s law.mass p mu1 mu0 +
+      (∑ w ∈ s, law.mass w * Paper2.bias (p w) (phat w) (mu0 w) (m w)) / Paper2.treatedMass s law.mass p
+Paper2.finite_orthogonal_product_bound.{u_1} {W : Type u_1} [Fintype W] (law : Paper2.Law W)
+  (p phat mu1 mu0 m theta : W → ℝ) (c eps : ℝ) (hc : 0 < c) (hp : ∀ (w : W), c ≤ p w ∧ p w ≤ 1 - c)
+  (hphat : ∀ (w : W), c ≤ phat w ∧ phat w ≤ 1 - c) (hrho : 0 < ∑ w, law.mass w * p w)
+  (hlearn :
+    (Paper2.risk law.mass p (fun w => Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) theta -
+          Paper2.risk law.mass p (fun w => Paper2.signal (p w) (phat w) (mu1 w) (mu0 w) (m w)) fun w => mu1 w - mu0 w) /
+        ∑ w, law.mass w * p w ≤
+      eps) :
+  (∑ w, law.mass w * p w * (theta w - (mu1 w - mu0 w)) ^ 2) / ∑ w, law.mass w * p w ≤
+    2 * eps +
+      4 / ((∑ w, law.mass w * p w) * c ^ 3) *
+        (√(∑ w, law.mass w * (m w - mu0 w) ^ 4) * √(∑ w, law.mass w * (phat w - p w) ^ 4))
+'Paper2.signal_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.finite_cell_CATT_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.risk_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.pointwise_young' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.weighted_fourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Paper2.finite_orthogonal_product_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

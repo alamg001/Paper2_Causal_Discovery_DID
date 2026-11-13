@@ -1,0 +1,283 @@
+[
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.scalar_squared_loss_self_bounding",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.control_weight_difference",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.conditional_signal_bias_identity",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.signal_double_robust_m",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.signal_double_robust_p",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.old_signal_counterexample",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.excess_risk_transport",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.cohort_normalization",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.squared_normalized_quantity",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.convex_two_cohort_pointwise",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.product_bound_from_reduction",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.path_certificates_imply_uniform_connection",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.pag_cpt_no_graphical_adjustment",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.finite_cell_signal_bias",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.finite_conditional_CATT_bias",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.finite_risk_decomposition",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.finite_true_excess",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.linear_stage_error_from_concentration",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.supplied_DAG_class_no_adjustment",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "ConjeturaLeanXYZ.selection_collider_active",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "Paper2.signal_identity",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "Paper2.finite_cell_CATT_bias",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "Paper2.risk_decomposition",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "Paper2.pointwise_young",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "Paper2.weighted_fourth",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Solution_and_Math",
+    "declaration": "Paper2.finite_orthogonal_product_bound",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Challenge",
+    "declaration": "Paper2.signal_identity",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Challenge",
+    "declaration": "Paper2.finite_cell_CATT_bias",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Challenge",
+    "declaration": "Paper2.risk_decomposition",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Challenge",
+    "declaration": "Paper2.pointwise_young",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Challenge",
+    "declaration": "Paper2.weighted_fourth",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "module_audit": "Challenge",
+    "declaration": "Paper2.finite_orthogonal_product_bound",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+]
