@@ -1,1 +1,31 @@
-
+name: Lean checks (ordinary CI)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Check repository metadata, license and source layout
+        run: |
+          python3 -m venv .lake/metadata-env
+          .lake/metadata-env/bin/python -m pip install -r scripts/requirements-validation.txt
+          .lake/metadata-env/bin/python scripts/validate_repository.py --root .
+      - uses: leanprover/lean-action@498ce7030982ff0e0cecd98a8f5a7c90615b4e41
+        with:
+          auto-config: 'false'
+          build: 'true'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'true'
+      - name: Audit declarations and compare the two statements
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y bubblewrap
+          bash validar.sh --comparator
+# This ordinary build is not the official Palomar full mechanical preflight.
+# Run the separate palomar-preflight.yml workflow before an intended submission.
